@@ -1,0 +1,125 @@
+=======================================================
+  ECOPOUR APP — HOW TO BUILD THE APK
+=======================================================
+
+This guide uses EAS Build (Expo's free cloud service).
+No Android Studio needed. The APK is built in the cloud
+and you download it when done (~5-10 minutes).
+
+-------------------------------------------------------
+STEP 1: Install Node.js (if not already installed)
+-------------------------------------------------------
+Download from: https://nodejs.org  (choose LTS version)
+
+-------------------------------------------------------
+STEP 2: Open a terminal and go to the app folder
+-------------------------------------------------------
+On Windows:
+  - Press Win + R, type "cmd", press Enter
+  - Type:  cd "C:\path\to\EcoPourApp"
+  - (Replace with the actual path to your EcoPourApp folder)
+
+-------------------------------------------------------
+STEP 3: Install dependencies
+-------------------------------------------------------
+Run:
+  npm install
+
+Wait for it to finish (may take 1-2 minutes).
+
+-------------------------------------------------------
+STEP 4: Install EAS CLI
+-------------------------------------------------------
+Run:
+  npm install -g eas-cli
+
+-------------------------------------------------------
+STEP 5: Create a FREE Expo account (if needed)
+-------------------------------------------------------
+Go to: https://expo.dev/signup
+Sign up with your email. It's completely free.
+
+-------------------------------------------------------
+STEP 6: Log in to your Expo account
+-------------------------------------------------------
+Run:
+  eas login
+
+Enter your Expo email and password when prompted.
+
+-------------------------------------------------------
+STEP 7: Link the project to your Expo account
+-------------------------------------------------------
+Run:
+  eas build:configure
+
+Press Enter/Y for any prompts. This sets up your project ID.
+
+-------------------------------------------------------
+STEP 8: BUILD THE APK  ← The main step!
+-------------------------------------------------------
+Run:
+  eas build --platform android --profile preview
+
+This uploads your code to Expo's servers and builds the APK
+in the cloud. It takes about 5-15 minutes.
+
+You'll see a build URL like:
+  https://expo.dev/accounts/YOUR_NAME/builds/xxxxx
+
+-------------------------------------------------------
+STEP 9: Download your APK
+-------------------------------------------------------
+When the build finishes, open the URL shown in the terminal.
+Click "Download" to get your APK file.
+
+OR run this to open it automatically:
+  eas build:list
+
+-------------------------------------------------------
+STEP 10: Install APK on your Android phone
+-------------------------------------------------------
+1. Transfer the APK file to your Android phone
+   (via USB cable, WhatsApp to yourself, Google Drive, etc.)
+
+2. On your phone, go to:
+   Settings → Security → "Unknown sources" or
+   Settings → Apps → Special access → Install unknown apps
+   → Enable for your file manager
+
+3. Open the APK file on your phone and tap "Install"
+
+4. Done! EcoPour app is now on your phone.
+
+=======================================================
+  TROUBLESHOOTING
+=======================================================
+
+Error: "eas: command not found"
+  → Run:  npm install -g eas-cli  again
+
+Error: "Not logged in"
+  → Run:  eas login
+
+Build fails with "package name already in use"
+  → Open app.json, change "in.ecopour.app" to something
+    unique like "in.ecopour.myapp123"
+
+APK won't install on phone
+  → Make sure "Install unknown apps" is enabled in Settings
+
+=======================================================
+  TOTAL TIME ESTIMATE
+=======================================================
+  Setup (Steps 1-7):   ~5 minutes
+  Build (Step 8):      ~5-15 minutes (cloud build)
+  Install (Step 10):   ~2 minutes
+
+=======================================================
+  SUMMARY — Just 3 commands after setup:
+=======================================================
+  npm install
+  eas login
+  eas build --platform android --profile preview
+
+=======================================================

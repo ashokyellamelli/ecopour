@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "EcoPour",
+    "slug": "ecopour",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#1B5E20"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1B5E20"
+      },
+      "package": "in.ecopour.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.ecopour.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d62f1b57-84e9-4246-a95c-0b7d047790af"
+      }
+    }
+  }
+}
